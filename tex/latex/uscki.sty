@@ -1,0 +1,84 @@
+%	@Name: 			uscki.sty
+%	@Author: 		Jan de Mooij
+% 	@Date:			Mei 2014
+%	@License:		Attribution-ShareAlike 4.0 International
+%	@Description:	Deze package is bedoeld voor leden van 
+%					de Utrechtse Studievereniging van Cognitieve
+%					Kunstmatige Intelligentie: Incognito en maakt
+%					het mogelijk Logo's van de vereniging in LaTeX
+%					te gebruiken.
+
+%					Deze package laadt logo's van de vereniging in, zodat
+%					deze met een simpel commando bruikbaar zijn.
+%					Op het moment van schrijven zijn, bij weten van
+%					ondergetekende, alle versies van logo's van USCKI 
+%					Incognito en van alle subcommissies die 
+%					beschikbaar zijn verwerkt.
+
+%					Voor het gebruik van deze package moeten de volgende 
+%					bestanden in dezelfde map staan:
+%						- ckilogos.ttf
+%						- ckilogos.tfm
+%						- uscki.sty
+%						- jouw .TeX-bestand
+%						
+%					Bij het aanroepen probeert deze package een 
+%					declaratie toe te voegen aan het LaTeX mapbestand.
+%					Als dit niet lukt, zal het lettertype niet 
+%					bruikbaar zijn.
+%					
+%Lijst van commando's met bijbehorende logo's:
+%						- \cki: 	CKI-letters in huisstijl
+%						- \CKI: 	CKI-letters in huisstijl inclusief
+%										punt op de i.
+%						- \USCKI:	USCKI-logo
+%						- \ABC:		ABC-logo
+%						- \Bata:	Bata-logo
+%						- \cafeCKI	Café-CKI-logo
+%						- \DraeCKI	DraeCKI-logo
+%						- \LoeCKI	LoeCKI-logo
+%						- \SympoCKI	Symposiumcommissielogo
+
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{uscki}[2014/05/23 USCKI Incognito Logo package]
+
+% Install the font type
+\DeclareFontFamily{T1}{ckilogos}{}
+\DeclareFontShape{T1}{ckilogos}{m}{n}{ <-> ckilogos}{}
+\pdfmapline{+ckilogos\space <ckilogos.ttf\space <T1-WGL4.enc}
+
+% Load CKI font
+\def\@usckilogo#1{{\usefont{T1}{ckilogos}{m}{n} #1 }}
+
+% Define character commands
+\newcommand{\cki}{\@usckilogo{a}\hspace{-.15cm}}
+\newcommand{\AI}{\@usckilogo{b}\hspace{-.15cm}}
+\newcommand{\USCKI}{\@usckilogo{c}}
+\newcommand{\ABCLogo}{\@usckilogo{d}}
+\newcommand{\Bata}{\@usckilogo{e}}
+\newcommand{\cafeCKI}{\@usckilogo{f}}
+\newcommand{\DraeCKI}{\@usckilogo{g}}
+\newcommand{\LoeCKI}{\@usckilogo{h}}
+\newcommand{\SympoCKI}{\@usckilogo{i}} 
+
+% Commissieafkortingen
+\newcommand{\ai}{AiAiAi }
+\newcommand{\ais}{AiAiAi}
+\newcommand{\iai}{Internet-\ai}
+\newcommand{\iais}{Internet-\ais}
+\newcommand{\een}{\'e\'en }
+\newcommand{\hinwozl}{\section{H.I.N.W.O.Z.L.}}
+\newcommand{\App}{\textbf{App\cki} }
+\newcommand{\Alu}{\textbf{Aluminium} }
+\newcommand{\Apr}{\textbf{Apr\'es-\cki} }
+\newcommand{\Ca}{\textbf{Caf\'e-\cki} }
+\newcommand{\Dr}{\textbf{Drae\cki} }
+\newcommand{\Ic}{\textbf{I\cki} }
+\newcommand{\Kie}{\textbf{Kie\cki} }
+\newcommand{\KL}{\textbf{Koe\cki\space Loe\cki} }
+\newcommand{\Loe}{\textbf{Loe\cki} }
+\newcommand{\Lu}{\textbf{Lu\cki} }
+\newcommand{\Pri}{\textbf{Pri\cki} }
+\newcommand{\Spo}{\textbf{Spo\cki} }
+\newcommand{\Sto}{\textbf{Sto\cki} }
+\newcommand{\Tre}{\textbf{Tre\cki} }

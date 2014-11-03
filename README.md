@@ -28,7 +28,7 @@ Lijst van commando's met bijbehorende logo's
 \cki        # CKI-letters in huisstijl
 \AI         # CKI-letters in huisstijl, inclusief de punt op de i
 \USCKI      # USCKI-logo
-\ABC        # ABC-logo
+\ABCLogo    # ABC-logo
 \Bata       # Bata-logo
 \cafeCKI    # Café-CKI-logo
 \DraeCKI    # DraeCKI-logo
